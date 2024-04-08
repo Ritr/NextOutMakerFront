@@ -15,7 +15,7 @@ const getCollection = async () => {
 const Collection = async () => {
     const list = await getCollection();
     return (
-        <div className="mt-8">
+        <div className="mt-8 px-2  pb-8">
             <Carousel>
                 <CarouselContent>
                     {list.Collections.map(collection => {
