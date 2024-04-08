@@ -1,13 +1,10 @@
 
 import { FaAngleDown } from "react-icons/fa6";
+import Collection from "./collection";
 
-const getCollection = async () => {
-    const res = await fetch("https://www.theoutmaker.com/api/get/collection/all");
-    return res.json()
-}
 const Header = async () => {
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 p-0">
             <div className="navbar-start flex relative gap-6">
                 <div className="dropdown dropdown-hover static">
                     <div tabIndex="0" role="button" className="flex gap-1 items-center group">
@@ -15,8 +12,7 @@ const Header = async () => {
                         <FaAngleDown className="group-hover:rotate-180 transition-all duration-300 ease-in-out"></FaAngleDown>
                     </div>
                     <ul tabIndex="0" className="dropdown-content z-[1] menu  bg-base-100 w-[1600px]">
-                        <li><a>Item 1</a></li>
-                        <li><a>Item 2</a></li>
+                        <Collection/>
                     </ul>
                 </div>
 
