@@ -1,4 +1,4 @@
-import React from "react";
+
 import img1 from "@/public/Materials/Teak.webp";
 import img2 from "@/public/Materials/Aluminum.webp";
 import img3 from "@/public/Materials/Rattan.webp";
@@ -7,7 +7,7 @@ import imgs2 from "@/public/stylish/2.jpg";
 import imgs3 from "@/public/stylish/3.jpg";
 import imgs4 from "@/public/stylish/4.jpg";
 import { ImgBaseUrl } from "@/lib/utils";
-
+import VideoPlayer from "@/components/videoPlayer";
 
 const materials = [
   {
@@ -39,10 +39,30 @@ const materials = [
     image: img4.src,
   },
 ];
+const MV = ({ text_h2, text_p, url }) => {
+  return (
+    <div className="hero relative">
+      <div className="video-wrapper w-full h-full">
+        <div className="w-full h-[50vh] md:h-[100vh] object-cover lg:object-cover wow fadeInUp">
+          <VideoPlayer url={url}></VideoPlayer>
+        </div>
+      </div>
+      <div className="hero-content text-center">
+        <div className="max-w-full pb-32">
+          <h2 className="text-base md:text-5xl text-white font-medium uppercase">
+            {text_h2}
+          </h2>
+          <p className="py-6 text-white">{text_p}</p>
+        </div>
+      </div>
+    </div>
+  );
+};
 const Materials = () => {
   const getRandomDuration = () => {
     return (Math.random() * (1.5 - 0.3) + 0.3).toFixed(2); // 生成介于 0.3 到 1.2 之间的随机数
   };
+
   return (
     <section className="py-10 md:py-20  pl-5 pr-5 ">
       <div className="w-full ">
@@ -55,12 +75,12 @@ const Materials = () => {
         <img
           src="https://outmaker.b-cdn.net/assets/1710146514821.webp"
           alt=""
-          className="hidden md:inline-block wow slideInLeft"
+          className="hidden w-full md:inline-block wow slideInLeft"
         />
         <img
           src={imgs2.src}
           alt=""
-          className="inline-block md:hidden wow slideInLeft"
+          className="inline-block w-full md:hidden wow slideInLeft"
         />
         <div className="flex mt-3 md:hidden justify-between gap-3  wow slideInLeft">
           <div className="flex-1 bg-[#F5F5F5]">
@@ -108,11 +128,11 @@ const Materials = () => {
         </div>
         <br></br>
 
-        {/* <MV
-          videoSource={ImgBaseUrl("assets/home/home3.mp4")}
+        <MV
+          url={ImgBaseUrl("assets/home/home3.mp4")}
           text_h2="Built to withstand everything life throws at us."
           text_p="Where Durability Embraces the Elements"
-        /> */}
+        />
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-1 md:gap-5 pt-10 mb-14">
           {materials.slice(0, 4)?.map((material) => (
@@ -143,10 +163,10 @@ const Materials = () => {
           ))}
         </div>
 
-        {/* <MV
-          videoSource={ImgBaseUrl("assets/home/home4.mp4")}
+        <MV
+          url={ImgBaseUrl("assets/home/home4.mp4")}
           text_h2="Sunbrella fabric easily handles various cold weather conditions."
-        /> */}
+        />
       </div>
     </section>
   );

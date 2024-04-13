@@ -32,6 +32,7 @@ const VideoPlayer = ({ url }) => {
             onClick={() => setIsMute(!isMute)}
           >
             {isMute ? (
+              
               <div className="flex items-center gap-2 px-2 text-primary">
                 <p className="bg-primary p-2 rounded-full">
                   <FaVolumeXmark className="text-white text-3xs md:text-sm" />

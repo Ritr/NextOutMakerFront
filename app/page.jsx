@@ -5,6 +5,8 @@ import Collection from "@/components/home/collection";
 import Stylish from "@/components/home/stylish";
 import Environment from "@/components/home/environment";
 import Materials from "@/components/home/materials";
+import Ins from "@/components/home/ins";
+import Review from "@/components/home/review";
 export default function () {
   return (
     <div>
@@ -31,6 +33,8 @@ export default function () {
       <Stylish />
       <Environment/>
       <Materials/>
+      <Ins/>
+      <Review/>
     </div>
   );
 }
