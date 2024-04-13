@@ -8,10 +8,7 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel";
 import { ImgBaseUrl } from "@/lib/utils";
-const getCollection = async () => {
-    const res = await fetch("https://www.theoutmaker.com/api/get/collection/all");
-    return res.json();
-}
+import { getCollection } from "@/api/collection";
 const Collection = async () => {
     const list = await getCollection();
     return (
@@ -30,6 +27,7 @@ const Collection = async () => {
                                             src={ImgBaseUrl(collection.collection_pic) + "?width=600"}
                                             alt="IMAGE"
                                             className=" h-48 rounded object-cover"
+                                            loading="lazy"
                                         />
                                     </div>
                                     {collection.collection_name}

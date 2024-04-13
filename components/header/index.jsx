@@ -3,6 +3,7 @@ import { FaAngleDown } from "react-icons/fa6";
 import Collection from "./collection";
 import Category from "./category";
 import Learn from "./learn";
+import DesignHelp from "./designHelp";
 const Header = async () => {
     return (
         <div className="navbar bg-base-100 p-0 items-stretch">
@@ -12,7 +13,7 @@ const Header = async () => {
                         Collection
                         <FaAngleDown className="group-hover:rotate-180 transition-all duration-200 ease-in-out"></FaAngleDown>
                     </div>
-                    <ul className="top-[100%] shadow-lg origin-top transition-all absolute duration-200 ease-in-out  bg-base-100 w-[1600px] opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 pointer-events-none group-hover:pointer-events-auto">
+                    <ul className="top-[100%] shadow-lg origin-top transition-all absolute duration-200 ease-in-out  z-[1] bg-base-100 w-[1600px] opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 pointer-events-none group-hover:pointer-events-auto">
                         <Collection />
                     </ul>
                 </div>
@@ -43,8 +44,7 @@ const Header = async () => {
                         <FaAngleDown className="group-hover:rotate-180 transition-all duration-300 ease-in-out"></FaAngleDown>
                     </div>
                     <ul className="top-[100%] shadow-lg dropdown-content z-[1] menu  bg-base-100 w-[1600px] absolute left-0">
-                        <li><a>Item 1</a></li>
-                        <li><a>Item 2</a></li>
+                        <DesignHelp/>
                     </ul>
                 </div>
             </div>
