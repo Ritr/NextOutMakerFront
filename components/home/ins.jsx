@@ -18,12 +18,10 @@ const Network = () => {
         return (Math.random() * (1.5 - 0.3) + 0.3).toFixed(2); // 生成介于 0.3 到 1.2 之间的随机数
     };
     return (
-        <section className="w-full">
-            <div className="text-left">
-                <h2 className="text-primary text-2xl md:text-3xl font-bold pb-3 text-center md:text-left">
-                    Outmaker Instagram Network
-                </h2>
-            </div>
+        <section className="w-full  px-4 md:px-0">
+            <h2 className="text-primary text-2xl md:text-4xl font-semibold pb-3">
+                Outmaker Instagram Network
+            </h2>
             <div className="md:hidden mb-4">
                 <Carousel>
                     <CarouselContent>

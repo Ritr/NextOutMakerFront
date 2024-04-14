@@ -7,6 +7,7 @@ import Environment from "@/components/home/environment";
 import Materials from "@/components/home/materials";
 import Ins from "@/components/home/ins";
 import Review from "@/components/home/review";
+import Tips from "@/components/home/tips";
 export default function () {
   return (
     <div>
@@ -31,10 +32,11 @@ export default function () {
       {/* popular collection */}
       <Collection />
       <Stylish />
-      <Environment/>
-      <Materials/>
-      <Ins/>
-      <Review/>
+      <Environment />
+      <Materials />
+      <Ins />
+      <Review />
+      <Tips />
     </div>
   );
 }

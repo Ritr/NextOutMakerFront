@@ -75,7 +75,7 @@ const Review = () => {
     return (Math.random() * (1.5 - 0.3) + 0.3).toFixed(2); // 生成介于 0.3 到 1.2 之间的随机数
   };
   return (
-    <section className="w-full pb-10 md:mt-10">
+    <section className="w-full pb-10 md:mt-10 px-4 md:px-0">
       <div className="flex justify-between items-center mb-1">
         <div className="">
           <h1 className="text-2xl md:text-4xl font-medium text-primary">
@@ -83,11 +83,11 @@ const Review = () => {
           </h1>
         </div>
       </div>
-      <Carousel className="mx-10 md:px-0">
+      <Carousel className="" options={{ algin: "start" }}>
         <CarouselContent>
           {reviews.map((review) => (
-            <CarouselItem  className="md:basis-1/3">
-              <div className="flex md:mx-8" key={review.id}>
+            <CarouselItem  className="basis-2/3 md:basis-1/4">
+              <div className="flex" key={review.id}>
                 <div
                   className="rounded-lg border-2  border-[#F2F2F2]  shadow hover:shadow-xl  wow slideInRight"
                   data-wow-duration={`${getRandomDuration()}s`}
@@ -157,8 +157,8 @@ const Review = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious  className="translate-x-3" />
-        <CarouselNext className="-translate-x-3" />
+        {/* <CarouselPrevious  className="translate-x-3" />
+        <CarouselNext className="-translate-x-3" /> */}
       </Carousel>
     </section>
   );

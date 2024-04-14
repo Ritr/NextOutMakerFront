@@ -6,7 +6,7 @@ const Environment = () => {
   return (
     <section className="w-full pb-20 pt-10 ">
       <div className="grid items-center grid-cols-1 md:grid-cols-2">
-        <div className="mb-6 md:mb-0">
+        <div className="mb-6 md:mb-0 px-4 md:px-0">
           <h4 className="text-primary text-2xl md:text-4xl font-medium">
             Environment Friendly
           </h4>

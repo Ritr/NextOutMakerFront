@@ -33,7 +33,7 @@ const Collection = async () => {
         </div>
     }
     return (
-        <section className="w-full pt-10 pl-5 pr-5 md:py-20">
+        <section className="w-full pt-10 px-4 md:px-0 md:py-20">
             <div>
                 <div className="flex justify-between items-center">
                     <div className="basis-2/3">
@@ -59,7 +59,7 @@ const Collection = async () => {
                     ))}
                     {
                         <Link
-                            className="sm:hidden md:inline"
+                            className="hidden md:inline"
                             href={`/collection-product/${Collections[8].collection_id}/${Collections[8].collection_name}`}
                             key={Collections[8].collection_id}
                         ><Item collection={Collections[8]}></Item>

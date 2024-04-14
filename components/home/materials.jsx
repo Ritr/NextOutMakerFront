@@ -64,7 +64,7 @@ const Materials = () => {
   };
 
   return (
-    <section className="py-10 md:py-20  pl-5 pr-5 ">
+    <section className="py-10 md:py-20  px-4 md:px-0">
       <div className="w-full ">
         <div className="text-left pb-4 mt-1">
           <h2 className="text-primary font-medium text-2xl md:text-4xl">
