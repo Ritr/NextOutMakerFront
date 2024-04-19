@@ -162,6 +162,7 @@ const CarouselPrevious = React.forwardRef(({ className, variant = "outline", siz
         : "-top-12 left-1/2 -translate-x-1/2 rotate-90", className)}
       disabled={!canScrollPrev}
       onClick={(e) => {
+        e.stopPropagation();
         scrollPrev();
       }}
       {...props}>
@@ -185,6 +186,7 @@ const CarouselNext = React.forwardRef(({ className, variant = "outline", size = 
         : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90", className)}
       disabled={!canScrollNext}
       onClick={(e) => {
+        e.stopPropagation();
         scrollNext();
       }}
       {...props}>

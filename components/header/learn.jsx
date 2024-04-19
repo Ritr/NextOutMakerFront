@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const Learn = () => {
     return (
-        <div className="px-2 pb-8 flex flex-col lg:flex-row mt-8 ">
+        <div className="w-[1600px] px-2 pb-8 flex flex-col lg:flex-row mt-8 ">
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-[100px]">
                 {/* first column */}
                 <div className="flex flex-col w-full">

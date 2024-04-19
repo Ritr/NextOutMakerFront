@@ -5,13 +5,18 @@ import Category from "./category";
 import Learn from "./learn";
 import DesignHelp from "./designHelp";
 import { IoCloseSharp, IoMenuSharp } from "react-icons/io5";
+import Nav from "./nav";
 
+import { getCollection } from "@/api/collection";
+import { getCategory } from "@/api/category";
 const Header = async () => {
+    const collectionList = await getCollection();
+    const categoryList = await getCategory();
     return (
         <div className="navbar bg-base-100 p-0 items-stretch px-4 md:px-0">
             <div className="navbar-start hidden md:flex relative gap-6 ">
-
-                <div className="h-full dropdown dropdown-hover static group flex items-center">
+                <Nav collectionList={collectionList.Collections} categoryList={categoryList.Categories}></Nav>
+                {/* <div className="h-full dropdown dropdown-hover static group flex items-center">
                     <div role="button" className="flex gap-1 items-center">
                         Collection
                         <FaAngleDown className="group-hover:rotate-180 transition-all duration-200 ease-in-out"></FaAngleDown>
@@ -49,7 +54,7 @@ const Header = async () => {
                     <ul className="top-[100%] shadow-lg dropdown-content z-[1] menu  bg-base-100 w-[1600px] absolute left-0">
                         <DesignHelp />
                     </ul>
-                </div>
+                </div> */}
 
             </div>
             <div className="navbar-start md:hidden">

@@ -1,4 +1,3 @@
-
 import Link from 'next/link';
 import {
     Carousel,
@@ -8,18 +7,16 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel";
 import { ImgBaseUrl } from "@/lib/utils";
-import { getCollection } from "@/api/collection";
-const Collection = async () => {
-    const list = await getCollection();
+const Collection = ({ collectionList }) => {
     return (
-        <div className="mt-8 px-2  pb-8">
+        <div className="w-[1600px] mt-8 px-2 pb-8">
             <Carousel>
                 <CarouselContent>
-                    {list.Collections.map(collection => {
+                    {collectionList.map(collection => {
                         return <CarouselItem className="basis-1/5">
                             <div className=" pb-6 space-y-[16px] text-primary border border-gray-50 p-3 rounded duration-500 transition-all hover:bg-slate-400 hover:text-white">
                                 <Link
-                                    href={`collection-product/${collection.collection_id}/${collection.collection_name}`}
+                                    href={`/collection-product/${collection.collection_id}/${collection.collection_name}`}
                                     className="text-xl md:text-2xl lg:text-3xl"
                                 >
                                     <div>
